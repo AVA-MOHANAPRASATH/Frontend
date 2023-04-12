@@ -2,7 +2,7 @@ FROM node:9.6.4
 
 WORKDIR /code
 
-RUN npm install npm@latest -g
+RUN npm i npm
 
 COPY . .
 
