@@ -1,9 +1,11 @@
-FROM node:16.13.1-alpine
+FROM node:latest
 
-WORKDIR /code
+WORKDIR /app
 
-RUN npm install npm@{latest version} npm start 
+COPY package.json ./
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
 
 COPY . .
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
