@@ -1,4 +1,4 @@
-FROM node:9.6.4
+FROM node:16.13.1-alpine
 
 WORKDIR /code
 
