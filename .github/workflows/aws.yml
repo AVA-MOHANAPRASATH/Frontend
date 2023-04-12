@@ -28,7 +28,7 @@ jobs:
   - name: Build and push Docker image
     run: |
       docker build .
-      docker build -t frontend. 
+      docker build -t frontend . 
       docker push mohanaprasath/frontend:latest
       
   - name: Configure AWS credentials
