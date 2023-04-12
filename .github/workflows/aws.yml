@@ -27,7 +27,7 @@ jobs:
 
   - name: Build and push Docker image
     run: |
-      docker build -t nodeapp
+      docker build -t mohanaprasath/nodeapp
       docker push mohanaprasath/nodeapp
       
   - name: Configure AWS credentials
