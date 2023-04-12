@@ -28,7 +28,7 @@ jobs:
   - name: Build and push Docker image
     run: |
       docker build -t ./Dockerfile
-      docker push mohanaprasath/nodeapp
+      docker push mohanaprasath/fronend
       
   - name: Configure AWS credentials
     uses: aws-actions/configure-aws-credentials@v2
