@@ -2,9 +2,7 @@ FROM node:16.13.1-alpine
 
 WORKDIR /code
 
-npm install npm@{latest version}
-
-RUN npm i npm
+RUN npm i npm npm install -g npm@7.19.1
 
 COPY . .
 
