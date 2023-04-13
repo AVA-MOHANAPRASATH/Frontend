@@ -44,7 +44,6 @@ jobs:
   - name: Update ECS service
     run: |
       ecs deploy \
-      --service-name lin-NP-USW1-SN\
       --cluster lin-NP-USW1-ECS \
       --mohanaprasath/frontend:latest \
       --timeout 900 \
