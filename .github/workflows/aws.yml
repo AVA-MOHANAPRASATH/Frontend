@@ -14,8 +14,7 @@ env:
  ECS_SERVICE: lin-NP-USW1-SN
  ECS_CLUSTER: lin-NP-USW1-ECS
  ECS_TASK_DEFINITION: lin-NP-USW1-TD
- 
-  CONTAINER_NAME:lin-frontend
+ CONTAINER_NAME: lin-frontend
 
 jobs:
  deploy:
