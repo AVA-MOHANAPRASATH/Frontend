@@ -12,7 +12,6 @@ env:
  DOCKER_HUB_USERNAME: ${{ secrets.USERNAME }} 
  DOCKER_HUB_PASSWORD: ${{ secrets.PASSWD }}
  ECS_SERVICE: lin-NP-USW1-SN
- ECS_CLUSTER: lin-NP-USW1-ECS
  ECS_TASK_DEFINITION: task-definition.json
  CONTAINER_NAME: lin-NP-USW1-BE
 
@@ -41,7 +40,7 @@ jobs:
     with:
       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      aws-region: us-east-2
+      aws-region: us-west-1
       
   - name: Fill in the new image ID in the Amazon ECS task definition
     id: task-def
