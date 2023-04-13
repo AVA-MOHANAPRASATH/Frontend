@@ -13,7 +13,7 @@ env:
  DOCKER_HUB_PASSWORD: ${{ secrets.PASSWD }}
  ECS_SERVICE: lin-NP-USW1-SN
  ECS_TASK_DEFINITION: task-definition.json
- CONTAINER_NAME: lin-NP-USW1-BE
+ CONTAINER_NAME: lin-NP-USW1-FE
 
 jobs:
  deploy:
@@ -47,7 +47,7 @@ jobs:
     uses: aws-actions/amazon-ecs-render-task-definition@v1
     with:
       task-definition: task-definition.json
-      container-name: lin-NP-USW1-BE
+      container-name: lin-NP-USW1-FE
       image: ${{ steps.build-image.outputs.image }}
 
   - name: Deploy Amazon ECS task definition
