@@ -13,7 +13,7 @@ env:
  DOCKER_HUB_PASSWORD: ${{ secrets.PASSWD }}
  ECS_SERVICE: lin-NP-USW1-SN
  ECS_CLUSTER: lin-NP-USW1-ECS
- ECS_TASK_DEFINITION: frontend/Taskdef.json .
+ ECS_TASK_DEFINITION: Taskdef.json .
  CONTAINER_NAME: lin-frontend
 
 jobs:
