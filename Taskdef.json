@@ -13,7 +13,7 @@
             "essential": true
         }
     ],
-	 "name": "sample-fargate-app",
+	 "name": "lin-NP-USW1-PM",
          "portMappings": [ 
             { 
                "containerPort": 80,
