@@ -5,6 +5,9 @@
     "family": "lin-NP-USW1-TF",
     "containerDefinitions": [
         {
+	    "entryPoint": [
+              "ping"
+      ],
             "name": "lin-NP-USW1-BE",
             "image": "https://hub.docker.com/repository/docker/mohanaprasath/frontend/general",
             "essential": true
