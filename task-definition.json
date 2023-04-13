@@ -1,25 +1,72 @@
-
 {
-  "family": "liln-NP-USW1-TD",
-  "containerDefinitions": [
-    {
-      "name": "Frontend",
-      "image": "079577709174.dkr.ecr.us-east-1.amazonaws.com/paypal:latest",
-      "cpu": 10,
-      "memory": 300,
-      "portMappings": [
-          {
-              "containerPort": 3001,
-              "hostPort": 3000
-          }
-      ],
-      "essential": true,
-      "environment": [
-          {
-              "name": "NODE_ENV",
-              "value": "production"
-          }
-      ]
-    }
-  ]
+    "taskDefinitionArn": "arn:aws:ecs:us-west-1:673536620341:task-definition/lin-NP-USW1-TD:1",
+    "containerDefinitions": [
+        {
+            "name": "Frontend",
+            "image": "https://hub.docker.com/repository/docker/mohanaprasath/frontend/general",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "frontend-3001-tcp",
+                    "containerPort": 3001,
+                    "hostPort": 3001,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/lin-NP-USW1-TD",
+                    "awslogs-region": "us-west-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "family": "lin-NP-USW1-TD",
+    "executionRoleArn": "arn:aws:iam::673536620341:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-04-13T19:10:24.510Z",
+    "registeredBy": "arn:aws:sts::673536620341:assumed-role/AWSReservedSSO_AVASOFT_CONTAINER_7f1ba3038e63b585/Mohanaprasath.D@avasoft.com",
+    "tags": []
 }
