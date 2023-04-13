@@ -13,7 +13,6 @@
             "essential": true
         }
     ],
-	 "name": "lin-NP-USW1-PM",
          "portMappings": [ 
             { 
                "containerPort": 80,
