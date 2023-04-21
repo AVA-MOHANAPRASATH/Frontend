@@ -1,9 +1,10 @@
 name: Deploy to ECS
 
 on:
-  push:
-    branches: [ "main" ]
-      #- main
+  workflow_dispatch:
+#   push:
+#     branches: [ "main" ]
+#       - main
 
 env:
  AWS_REGION: us-west-1
