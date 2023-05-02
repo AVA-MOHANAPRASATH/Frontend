@@ -56,4 +56,4 @@ jobs:
 #       task-definition: ${{ steps.task-def.outputs.task-definition }}
 #       service: lin-NP-USW1-SN
 #       cluster: lin-NP-USW1-ECS
-#       wait-for-service-stability: true
+#       wait-for-service-stability: false
